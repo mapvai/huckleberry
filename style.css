@@ -1,3 +1,23 @@
+:root {
+  /* Colors */
+  --primary-color: hsl(160deg, 100%, 30%);
+  --secondary-lighter-color: hsl(45deg, 100%, 50%);
+  --secondary-darker-color: hsl(45deg, 100%, 40%);
+  /* greys*/
+  --black-color: hsl(0deg, 0%, 0%);
+  --very-dark-color: hsl(0deg, 0%, 10%);
+  --dark-color: hsl(0deg, 0%, 30%);
+  --medium-color: hsl(0deg, 0%, 40%);
+  --light-color: hsl(0deg, 0%, 60%);
+  --white-color: hsl(0deg, 0%, 100%);
+
+  /* Font Sizes*/
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
@@ -9,4 +29,68 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+header {
+  background-color: var(--white-color);
+  border-bottom: var(--light-color) 8px solid;
+  height: 382px;
+  padding-top: 86px;
+}
+
+main {
+  background-color: var(--medium-color);
+  height: calc(100vh - 382px);
+  min-height: fit-content;
+  min-height: min(100vh - 382px, fit-content);
+  padding-top: 72px;
+  padding-bottom: 16px;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  max-width: 415px;
+  padding: 0 24px;
+}
+
+.intro-chunk strong {
+  color: var(--primary-color);
+}
+
+.intro-chunk p {
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: var(--font-size-medium);
+}
+
+.title {
+  font-size: var(--font-size-xlarge);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.card {
+  background-color: var(--white-color);
+  padding: 8 24px;
+  border-bottom: var(--light-color) 8px solid;
+}
+
+.card p {
+  line-height: 1.5;
+  font-weight: 500;
+  max-width: 752px;
+}
+
+.indented-heading {
+  margin-left: -32px;
+  margin-top: 0px;
+  padding: 16px 32px;
+  background-color: var(--secondary-lighter-color);
+  border-bottom: var(--secondary-darker-color) 8px solid;
+  font-size: var(--font-size-large);
+  font-weight: 800;
+  line-height: 1.2;
+}
